@@ -9,24 +9,31 @@ module.exports = async ({ config }) => {
   });
 
   config.module.rules.push({
-    test: /\.(post)?css$/,
+    test: /\.html$/,
     use: [
       {
-        loader: "style-loader"
-      },
-      {
-        loader: "css-loader",
-        options: {
-          modules: true
-        }
-      },
-      {
-        loader: "postcss-loader"
+        loader: "raw-loader"
       }
     ]
   });
 
-  config.resolve.extensions.push(".ts", ".postcss");
+  config.module.rules.push({
+    test: /\.(p|post)?css$/,
+    use: [
+      {
+        loader: "raw-loader"
+      },
+      {
+        loader: "postcss-loader",
+        options: {
+          ident: "postcss",
+          plugins: () => [require("postcss-nested")(), require("cssnano")()]
+        }
+      }
+    ]
+  });
+
+  config.resolve.extensions.push(".ts", ".html", ".pcss");
 
   return config;
 };

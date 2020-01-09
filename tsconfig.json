@@ -19,6 +19,6 @@
     "target": "esnext",
     "typeRoots": ["stories/types", "node_modules/@types"]
   },
-  "include": ["stories/**/*"],
+  "include": ["src/**/*.ts", "src/**/*.pcss", "src/**/*.html"],
   "exclude": ["node_modules"]
 }

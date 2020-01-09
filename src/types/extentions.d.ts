@@ -1,4 +1,4 @@
-declare module "*.postcss" {
+declare module "*.pcss" {
   const value: string;
   export default value;
 }

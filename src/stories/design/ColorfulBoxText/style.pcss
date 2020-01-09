@@ -1,0 +1,53 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  --line-color: hsla(40, 100%, 70%, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: repeating-linear-gradient(
+    45deg,
+    var(--line-color),
+    var(--line-color) 5px,
+    white 5px,
+    white 10px
+  );
+}
+
+.container {
+}
+
+.colorful-box {
+  --box-side: 80px;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--box-side);
+  height: var(--box-side);
+  background: #3f61e6;
+  border: 5px solid #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.54);
+  line-height: 1;
+  font-size: calc(var(--box-side) - 4px);
+  font-weight: bold;
+  color: #fff;
+  &:before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    width: calc(var(--box-side) - 2px);
+    height: calc(var(--box-side) - 2px);
+    border: 2px solid #3f61e6;
+  }
+}

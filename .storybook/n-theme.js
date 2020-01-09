@@ -32,6 +32,5 @@ export default create({
   inputBorderRadius: 4,
 
   brandTitle: "N Web Components",
-  brandUrl: "https://nekobato.net"
-  // brandImage: "https://placehold.it/350x150"
+  brandUrl: "https://github.com/nekobato/n-web-components"
 });

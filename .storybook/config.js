@@ -1,4 +1,4 @@
-import { configure, addParameters } from "@storybook/html";
+import { configure, addParameters, addDecorator } from "@storybook/html";
 import myTheme from "./n-theme";
 
 addParameters({
@@ -9,4 +9,8 @@ addParameters({
   }
 });
 
-configure(require.context("../src", true, /\.stories\.ts$/), module);
+addDecorator(storyFn => {
+  return `<div class="story-container">${storyFn()}</div>`;
+});
+
+configure(require.context("../src/stories", true, /\.stories\.ts$/), module);
