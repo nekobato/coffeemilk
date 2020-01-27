@@ -1,4 +1,6 @@
 import "./ColorfulBoxText";
+import "./HorrorText";
+import "./SlotComponent";
 
 export default {
   title: "Design"
@@ -17,5 +19,27 @@ export const colorfulBoxText = () => {
     <colorful-box-text text="E"></colorful-box-text>
     <colorful-box-text text="A"></colorful-box-text>
     <colorful-box-text text="D"></colorful-box-text>
+  `;
+};
+
+export const horrorText = () => {
+  return `
+    <style>
+      horror-text {
+        font-size: 16px;
+      }
+    </style>
+    <horror-text text="あのイーハトーヴォのすきとおった風、夏でも底に冷たさをもつ青いそら、うつくしい森で飾られたモリーオ市、郊外のぎらぎらひかる草の波"></horror-text>
+  `;
+};
+
+export const SlotComponent = () => {
+  return `
+    <div>
+      <slot-component>
+        <span slot="text">This is slot</span>
+      </slot-component>
+      <div class="text">This is outer div</div>
+    </div>
   `;
 };

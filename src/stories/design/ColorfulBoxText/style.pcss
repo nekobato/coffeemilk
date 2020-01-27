@@ -1,5 +1,6 @@
 .colorful-box {
   --box-side: 80px;
+  box-sizing: border-box;
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -15,6 +16,7 @@
   color: #fff;
   &:before {
     content: "";
+    box-sizing: border-box;
     position: absolute;
     top: -4px;
     left: -4px;
