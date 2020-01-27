@@ -10,10 +10,7 @@ export class ColorfulBoxText extends LitElement {
       <style>
         ${style}
       </style>
-
-      <div class="container hoge">
-        <span class="colorful-box">${this.text}</span>
-      </div>
+      <span class="colorful-box">${this.text}</span>
     `;
   }
 }
