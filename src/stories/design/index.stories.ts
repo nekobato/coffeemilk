@@ -2,6 +2,13 @@ import "./ColorfulBoxText";
 import "./HorrorText";
 import "./SlotComponent";
 
+// customElements.define("box", box);
+// customElements.whenDefined("box");
+
+// Promise.all([customElements.whenDefined("x-box")]).then(() => {
+//   document.querySelector("x-box").style.display = "block";
+// });
+
 export default {
   title: "Design"
 };
