@@ -8,7 +8,7 @@ export default defineConfig({
   sitemap: {
     hostname: "https://nekobato.github.io/nvcc/",
   },
-
+  base: "/nvcc/",
   themeConfig: {
     sidebar: [
       {
