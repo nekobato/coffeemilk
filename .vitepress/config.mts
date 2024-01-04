@@ -3,7 +3,8 @@ import { defineConfig } from "vitepress";
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "NVCC",
-  description: "Nekobato (Vue) Component Collections for Web",
+  description: "Nekobato (Vue) Component Collection for Web",
+  lang: "ja-JP",
   srcDir: "src",
   sitemap: {
     hostname: "https://nekobato.github.io/nvcc/",
@@ -11,6 +12,10 @@ export default defineConfig({
   base: "/nvcc/",
   themeConfig: {
     sidebar: [
+      {
+        text: "Home",
+        link: "/",
+      },
       {
         text: "Components",
         items: [
@@ -25,13 +30,8 @@ export default defineConfig({
                 text: "Basic Buttons",
                 link: "/collections/game-ui/basic-buttons",
               },
-              {
-                text: "Colorful List",
-                link: "/collections/game-ui/colorful-list",
-              },
             ],
           },
-          { text: "Snap", link: "/collections/snap" },
           { text: "Stamp Password", link: "/collections/stamp-password" },
         ],
       },

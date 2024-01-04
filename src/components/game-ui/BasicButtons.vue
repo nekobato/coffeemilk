@@ -31,9 +31,7 @@
 </template>
 
 <script>
-export default {
-  props: ["list"],
-};
+export default {};
 </script>
 
 <style scoped>
@@ -130,8 +128,6 @@ export default {
   font-size: 16px;
   font-weight: bold;
   border-color: hsl(210, 80%, 50%);
-  transform-style: preserve-3d;
-  transform: rotateX(-30deg) rotateY(-20deg) rotateZ(10deg);
 }
 .button.type-3::before {
   border-color: hsl(210, 80%, 50%);

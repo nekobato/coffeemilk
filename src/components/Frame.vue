@@ -6,7 +6,8 @@
 
 <style scoped>
 .frame {
-  width: 540px;
+  margin-top: 40px;
+  width: 640px;
   height: 400px;
   display: flex;
   justify-content: center;
